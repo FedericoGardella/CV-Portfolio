@@ -10,6 +10,31 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ .dot-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 16px 16px;
+  animation: floatBackground 10s infinite linear;
+}
+
+@keyframes floatBackground {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 10px 10px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
